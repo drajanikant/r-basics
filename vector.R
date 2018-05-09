@@ -71,3 +71,64 @@ vect
 vect[3] <- 33
 vect
 
+#--------------------------------------------------
+# Naming the vector components
+#--------------------------------------------------
+vect <- c(24000, 25000, 26500) # creating the vector
+names(vect) <- c("ram","shyam","balram")
+
+vect["ram"] # return the value of the ram key or name
+
+# removes the names we can assing the null value to them
+names(vect) <- NULL
+vect
+
+#--------------------------------------------------
+# Filtering the vector
+#--------------------------------------------------
+x <- seq(11,20, length=10)
+x
+
+# Filtering the vector using the conditional operator
+y <- x[x>15]
+y
+
+y <- x[x<14]
+y
+
+y <- x[ x>12 & x<17 ]
+y
+
+#--------------------------------------------------
+# Checking the index of the component form the vector
+#--------------------------------------------------
+x <- seq(11,20, length=10)
+x
+
+which(x == 14) # Check the index of the component if not foound return 0
+i <- which(x > 15) # check the indices which component is less than 15
+i
+
+#--------------------------------------------------
+# Checking the value is present in the vector or not
+# for this checking we are using the %in% an binay oprator
+#--------------------------------------------------
+
+22 %in% x # returns the FALSE result
+
+12 %in% x # returns the TRUE result
+
+#--------------------------------------------------
+# all() and any() function
+#--------------------------------------------------
+# all() function check that the give condition is satisfied by the all elements of the vector or not
+x <- seq(11,20, length=10)
+x
+
+all(x > 10) # checking weathe all elements are greter than 10 
+
+# any() it checks the any component of the vector meets the condition
+
+any(x > 200)
+
+
